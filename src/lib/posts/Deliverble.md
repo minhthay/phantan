@@ -133,5 +133,4 @@ Hệ thống sử dụng kiến trúc phân tán đơn giản nhưng rõ ràng, 
 
 ```
 
-Bạn có muốn mình đóng gói bài viết này thành file `.md` để tải về, hoặc cần mình tạo ảnh sơ đồ đã render sẵn không?
-```
+
