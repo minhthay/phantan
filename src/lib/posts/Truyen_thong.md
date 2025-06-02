@@ -9,11 +9,7 @@ coverWidth: 16
 coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
-Cảm ơn bạn đã nhắc. Dưới đây là nội dung **viết lại hoàn chỉnh, đúng định dạng Markdown chuẩn**, đảm bảo có các tiêu đề `#`, danh sách `-`, bảng `|`, khối mã ` ``` ` đầy đủ – dành cho **bài tập 1, phần 5: Tìm hiểu RabbitMQ**.
 
----
-
-````markdown
 #  Tìm hiểu RabbitMQ – Dịch vụ truyền thông điệp trong hệ thống phân tán
 
 ## 1. Giới thiệu

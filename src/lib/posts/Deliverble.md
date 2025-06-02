@@ -16,40 +16,7 @@ excerpt: Check out how heading links work with this starter in this post.
 
 Hệ thống được thiết kế theo mô hình phân tán, nơi **Apache Airflow** đóng vai trò là trung tâm điều phối các tác vụ xử lý đơn hàng, giao tiếp với nhiều **node kho hàng độc lập** thông qua **RESTful API**.
 
-```plantuml
-@startuml
-title Kiến trúc hệ thống phân tán sử dụng Apache Airflow (Dọc)
 
-actor "Người dùng / API" as User
-
-node "Apache Airflow" {
-  component "Web Server"
-  component "Scheduler"
-  component "DAG: order_dag.py" as DAG
-}
-
-database "PostgreSQL" as DB
-
-node "Warehouse Node A\n(Flask - port 5001)" as NodeA
-node "Warehouse Node B\n(Flask - port 5002)" as NodeB
-node "Warehouse Node C\n(Flask - port 5003)" as NodeC
-
-User --> DAG : Gửi đơn hàng
-
-DAG --> NodeA : Kiểm tra tồn kho
-DAG --> NodeB : Kiểm tra tồn kho
-DAG --> NodeC : Kiểm tra tồn kho
-
-DAG --> NodeB : Gửi đơn hàng
-NodeB --> DAG : Phản hồi trạng thái
-
-DAG --> DB : Ghi trạng thái đơn hàng
-DAG --> "Web Server" : Hiển thị kết quả
-
-@enduml
-````
-
----
 
 ## 2. Mô tả chi tiết các thành phần trong hệ thống
 
