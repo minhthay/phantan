@@ -129,8 +129,4 @@ CREATE TABLE IF NOT EXISTS order_status (
 
 Hệ thống sử dụng kiến trúc phân tán đơn giản nhưng rõ ràng, tận dụng khả năng điều phối linh hoạt của Apache Airflow. Bằng cách container hóa các thành phần, việc triển khai và mở rộng trở nên nhanh chóng và hiệu quả.
 
----
-
-```
-
 
